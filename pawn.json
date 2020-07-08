@@ -1,0 +1,72 @@
+{
+	"user": "Aktah",
+	"repo": "samp-keki",
+	"entry": "gamemodes/keki.pwn",
+	"output": "gamemodes/keki.amx",
+	"dependencies": [
+		"sampctl/samp-stdlib",
+		"pBlueG/SA-MP-MySQL:R41-4",
+		"Zeex/samp-plugin-crashdetect",
+		"samp-incognito/samp-streamer-plugin",
+		"aktah/YSI-Includes",
+		"Southclaws/samp-whirlpool",
+		"Open-GTO/foreach",
+		"urShadow/Pawn.CMD",
+		"maddinat0r/sscanf:v2.8.2",
+		"oscar-broman/md-sort",
+		"maddinat0r/samp-log",
+		"aktah/SAMP-CEFix",
+		"oscar-broman/strlib",
+		"urShadow/Pawn.Regex",
+		"samp-incognito/samp-gvar-plugin",
+		"aktah/easyDialog"
+	],
+	"local": true,
+	"builds": [
+		{
+			"name": "main",
+			"includes": [
+				"legacy"
+			]
+		}
+	],
+	"runtime": {
+		"version": "0.3.7",
+		"mode": "server",
+		"echo": "-",
+		"rcon_password": "{(FeRs332=}\u003c",
+		"port": 7777,
+		"hostname": "[SA-MP] Keki Project",
+		"maxplayers": 100,
+		"language": "TH",
+		"mapname": "San Andreas",
+		"weburl": "-",
+		"gamemodetext": "Unknown",
+		"announce": true,
+		"lanmode": false,
+		"query": true,
+		"rcon": false,
+		"logqueries": false,
+		"sleep": 5,
+		"maxnpc": 0,
+		"stream_rate": 1000,
+		"stream_distance": 200,
+		"onfoot_rate": 30,
+		"incar_rate": 30,
+		"weapon_rate": 30,
+		"chatlogging": true,
+		"timestamp": true,
+		"messageholelimit": 3000,
+		"messageslimit": 500,
+		"ackslimit": 3000,
+		"playertimeout": 10000,
+		"minconnectiontime": 0,
+		"lagcompmode": 1,
+		"connseedtime": 300000,
+		"db_logging": false,
+		"db_log_queries": false,
+		"conncookies": true,
+		"cookielogging": false,
+		"output": true
+	}
+}
