@@ -56,7 +56,7 @@ stock ReturnFactionWeaponName(weaponid)
 	    name = "Armour";
 	}
 	else {
-		if (weaponid == 0) name = "ว่าง";
+		if (weaponid == 0) name = "รรจร’ยง";
 		else GetWeaponName(weaponid, name, sizeof(name));
 	}
 	return name;
@@ -258,14 +258,14 @@ stock GetBodyPartName(bodypart)
 	new part[11];
 	switch(bodypart)
 	{
-		case BODY_PART_TORSO: part = "ลำตัว";
-		case BODY_PART_GROIN: part = "ขาหนีบ";
-		case BODY_PART_LEFT_ARM: part = "แขนซ้าย";
-		case BODY_PART_RIGHT_ARM: part = "แขนขวา";
-		case BODY_PART_LEFT_LEG: part = "ขาซ้าย";
-		case BODY_PART_RIGHT_LEG: part = "ขาขวา";
-		case BODY_PART_HEAD: part = "หัว";
-		default: part = "ไม่ทราบ";
+		case BODY_PART_TORSO: part = "ร…ร“ยตร‘ร";
+		case BODY_PART_GROIN: part = "ยขร’รยนร•ยบ";
+		case BODY_PART_LEFT_ARM: part = "รกยขยนยซรฉร’ร";
+		case BODY_PART_RIGHT_ARM: part = "รกยขยนยขรร’";
+		case BODY_PART_LEFT_LEG: part = "ยขร’ยซรฉร’ร";
+		case BODY_PART_RIGHT_LEG: part = "ยขร’ยขรร’";
+		case BODY_PART_HEAD: part = "รร‘ร";
+		default: part = "รครรจยทรร’ยบ";
 	}
 	return part;
 }
@@ -319,9 +319,9 @@ stock ReturnDateTime(type = 0)
 	gettime(date[3], date[4], date[5]);
 
 	switch(type) {
-		case 0: format(szDay, sizeof(szDay), "%02d %s พ.ศ %d เวลา %02d:%02d:%02d", date[0], MonthDay[date[1] - 1], date[2]+543, date[3], date[4], date[5]);
+		case 0: format(szDay, sizeof(szDay), "%02d %s ยพ.ร %d ร รร…ร’ %02d:%02d:%02d", date[0], MonthDay[date[1] - 1], date[2]+543, date[3], date[4], date[5]);
 		case 1: format(szDay, sizeof(szDay), "%02d-%02d-%d %02d:%02d", date[0], date[1], date[2]+543, date[3], date[4]);
-		case 2: format(szDay, sizeof(szDay), "%02d %s %d เวลา %02d:%02d", date[0], szMonthDay[date[1] - 1], date[2]+543, date[3], date[4]);
+		case 2: format(szDay, sizeof(szDay), "%02d %s %d ร รร…ร’ %02d:%02d", date[0], szMonthDay[date[1] - 1], date[2]+543, date[3], date[4]);
 	}
 
 	return szDay;
@@ -478,7 +478,4 @@ stock MySQLUpdateStr(query[], const sqlvalname[], const sqlupdatestr[])
 {
 	MySQLUpdateBuild(query);
 	new updval[128];
-	mysql_format(dbCon, updval, sizeof(updval), "`%s`='%e'", sqlvalname, sqlupdatestr);
-	strcat(query, updval, MAX_STRING);
-	return 1;
-}
+	mysql_format(dbCon, updval
